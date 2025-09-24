@@ -26,3 +26,16 @@ landing-clon-portfolio/
 │── style.css
 └── README.md
 https://kobacvjfaiffer.github.io/landing-page-clon/
+
+📚 Tecnologías utilizadas
+
+HTML5
+
+CSS3
+
+👤 Autor
+
+Kobac J. Faiffer (King Búfalo)
+🔗 LinkedIn
+
+📧 kobacjfaiffer10@gmail.com
