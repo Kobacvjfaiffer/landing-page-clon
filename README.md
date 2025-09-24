@@ -1,3 +1,5 @@
+
+
 # 🚀 Landing Page Clon
 
 Este proyecto es una **landing page simple y moderna**, construida desde cero con **HTML5 y CSS3**, como parte de mi portafolio de desarrollador FullStack en formación.
@@ -23,4 +25,4 @@ landing-clon-portfolio/
 │── index.html
 │── style.css
 └── README.md
-
+https://kobacvjfaiffer.github.io/landing-page-clon/
