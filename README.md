@@ -7,7 +7,9 @@ Este proyecto es una **landing page simple y moderna**, construida desde cero co
 ---
 
 ## 🖼️ Vista Previa
-*(Agrega aquí una captura de pantalla cuando la tengas lista)*
+## 🚀 Demo en vivo
+[👉 Ver Landing Page](https://kobacvjfaiffer.github.io/landing-page-clon/)
+
 
 ---
 
