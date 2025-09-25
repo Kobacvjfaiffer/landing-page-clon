@@ -1,3 +1,25 @@
+/* Mobile First base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.features article {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -60,3 +82,32 @@ nav a {
   gap: 2rem;
   padding: 3rem;
 }
+
+/* Tablet */
+@media (min-width: 768px) {
+  .features {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .features article {
+    flex: 1;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 1024px) {
+  nav ul {
+    gap: 2rem;
+  }
+
+  .hero {
+    padding: 4rem;
+  }
+
+  .features {
+    gap: 2rem;
+    padding: 4rem;
+  }
+}
+
