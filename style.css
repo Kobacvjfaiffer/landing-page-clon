@@ -151,3 +151,70 @@ footer p {
   color: #4CAF50; /* Verde brillante en hover */
 }
 
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #111;
+  color: #fff;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #4CAF50;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://picsum.photos/1920/1080') no-repeat center/cover;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  background: #4CAF50;
+  padding: 12px 24px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #45a049;
+}
