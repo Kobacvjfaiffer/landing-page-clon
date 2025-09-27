@@ -5,44 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Clon</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Font (opcional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+
+  navToggle.addEventListener('click', function(){
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('open');
+  });
+
+  // cerrar menú al pulsar un link (buena UX móvil)
+  document.querySelectorAll('.nav a').forEach(a=>{
+    a.addEventListener('click', ()=> {
+      if(nav.classList.contains('open')){
+        nav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+});
+</script>
+
 <body>
   <header>
     <div class="logo">KobacDev</div>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Proyectos</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
+
+    <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+     <span class="bar"></span>
+     <span class="bar"></span>
+     <span class="bar"></span>
+    </button>
+
+   <nav class="nav" aria-label="Menú principal">
+    <img src="asstes/img/logo.png" alt="Logo de KobacDev" class="logo">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+   </nav>
   </header>
   
   <main>
-    <section class="hero">
-      <h1>Construyendo el futuro linea por linea</h1>
-      <p>Desarrollador FullStack en formación, creando proyectos modernos con HTML, CSS y JavaScript.</p>
-      <a href="#proyectos" class="btn">Ver mis proyectos</a>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+       <h1>Construyendo el futuro, línea por línea.</h1>
+       <p>Desarrollador FullStack en formación — proyectos reales con HTML, CSS y JavaScript.</p>
+       <a href="#services" class="btn">Ver mis proyectos</a>
+      </div>
+     <div class="hero-image">
+        <img src="asstes/img/hero.jpg" alt="Imagen de héroe">
+      </div>/
     </section>
     
-    <section class="features">
-      <article>
-        <h3>Diseño moderno</h3>
-        <p>HTML y CSS limpio y semántico.</p>
-      </article>
-      <article>
-        <h3>Responsive</h3>
-        <p>Se adapta a cualquier pantalla.</p>
-      </article>
-      <article>
-        <h3>Fácil de usar</h3>
-        <p>Código simple y escalable.</p>
-      </article>
+    <section id="services" class="features">
+     <article class="card">
+      <div class="feature1-image">
+        <img src="asstes/img/feature1.jpg" alt="Imagen de card1">
+      </div>
+       <i class="fas fa-code icon"></i>
+       <h3>Desarrollo Web</h3>
+       <p>HTML, CSS, JavaScript y proyectos React sencillos.</p>
+     </article>
+     <article class="card">
+      <div class="feature2-image">
+        <img src="asstes/img/feature2.jpg" alt="Imagen de card2">
+      </div>
+       <i class="fas fa-database icon"></i>
+       <h3>Back-end</h3>
+       <p>APIs REST Node/Express, bases de datos SQL/NoSQL.</p>
+     </article>
+     <article class="card">
+       <div class="feature1-image">
+        <img src="asstes/img/feature1.jpg" alt="Imagen de card1">
+      </div>
+       <i class="fas fa-cloud-upload-alt icon"></i>
+       <h3>Deploy</h3>
+       <p>Vercel/GitHub Pages y deploy de backends en Render/Railway.</p>
+     </article>
     </section>
-  </main>
+
+    <section id="about" class="about">
+     <img src="asstes/img/mi-foto.jpeg" 
+       srcset="asstes/img/mi-foto.jpeg 480w, assets/img/profile.jpg 800w" 
+       sizes="(max-width:600px) 120px, 220px"
+       alt="Foto de Kobac">
+  <div class="about-text">
+    <h2>Sobre mí</h2>
+    <p>Soy Kobac J. Faiffer — desarrollador FullStack en formación. Me apasiona convertir ideas en productos con código limpio y enfoque práctico.</p>
+    <a href="#contact" class="btn">Contactar</a>
+  </div>
+</section>
+
+   </main>
+
   <footer>
   <p>&copy; 2025 Kobac J. Faiffer - Todos los derechos reservados.</p>
   <div class="social-links">
