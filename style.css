@@ -29,6 +29,13 @@ header {
   top: 0;
   z-index: 1000;
 }
+header nav ul li a {
+  color: #333; /* oscuro para contraste */
+}
+header nav ul li a:hover {
+  color: var(--accent);
+}
+
 
 .logo {
   height: 50px;
@@ -144,12 +151,12 @@ header {
 .features img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
+
 }
 /* En desktop limitar el tamaño */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .features img {
-    max-width: 280px;  /* ajusta según diseño */
+    max-width: 300px;  /* ajusta según diseño */
   }
 }
 
