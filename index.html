@@ -10,31 +10,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
-  <!-- JS NAV -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      const navToggle = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.nav');
-
-      navToggle.addEventListener('click', function(){
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !expanded);
-        nav.classList.toggle('open');
-      });
-
-      document.querySelectorAll('.nav a').forEach(a=>{
-        a.addEventListener('click', ()=> {
-          if(nav.classList.contains('open')){
-            nav.classList.remove('open');
-            navToggle.setAttribute('aria-expanded', 'false');
-          }
-        });
-      });
-    });
-  </script>
-
   <!-- HEADER -->
   <header>
     <img src="assets/img/logo.png" alt="Logo de KobacDev" class="logo">
@@ -70,27 +46,9 @@
     </section>
     
     <!-- FEATURES -->
-    <section id="services" class="features">
-     <article class="card">
-        <img src="assets/img/feature1.jpg" alt="Imagen de Desarrollo Web">
-        <i class="fas fa-code icon"></i>
-        <h3>Desarrollo Web</h3>
-        <p>HTML, CSS, JavaScript y proyectos React sencillos.</p>
-     </article>
-     <article class="card">
-        <img src="assets/img/feature2.jpg" alt="Imagen de Backend">
-        <i class="fas fa-database icon"></i>
-        <h3>Back-end</h3>
-        <p>APIs REST Node/Express, bases de datos SQL/NoSQL.</p>
-     </article>
-     <article class="card">
-        <img src="assets/img/feature1.jpg" alt="Imagen de Deploy">
-        <i class="fas fa-cloud-upload-alt icon"></i>
-        <h3>Deploy</h3>
-        <p>Vercel/GitHub Pages y deploy de backends en Render/Railway.</p>
-     </article>
-    </section>
-
+    <section id="services" class="features"></section>
+    <div id="loader">Cargando...</div> 
+    
     <!-- ABOUT -->
     <section id="about" class="about">
      <img src="assets/img/mi-foto.jpeg" 
@@ -104,14 +62,36 @@
      </div>
     </section>
    </main>
+  
+   <!-- CONTACT -->
+   <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Correo:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="formMessage" class="hidden"></p>
+   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer >
     <p>&copy; 2025 Kobac J. Faiffer - Todos los derechos reservados.</p>
     <div class="social-links">
       <a href="https://github.com/Kobacvjfaiffer" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/kobac-j-faiffer-950750bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="main.js"></script>
+  <script src="server.js"></script>
 </body>
 </html>
