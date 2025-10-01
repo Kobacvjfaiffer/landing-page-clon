@@ -1,0 +1,24 @@
+{
+  "name": "landing-page-clon",
+  "version": "1.0.0",
+  "description": "Este proyecto es una **landing page simple y moderna**, construida desde cero con **HTML5 y CSS3**, como parte de mi portafolio de desarrollador FullStack en formación.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kobacvjfaiffer/landing-page-clon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kobacvjfaiffer/landing-page-clon/issues"
+  },
+  "homepage": "https://github.com/Kobacvjfaiffer/landing-page-clon#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

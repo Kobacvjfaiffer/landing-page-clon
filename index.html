@@ -5,56 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Clon</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
+  <!-- HEADER -->
   <header>
-    <div class="logo">KobacDev</div>
-    <nav>
+    <img src="assets/img/logo.png" alt="Logo de KobacDev" class="logo">
+
+    <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+     <span class="bar"></span>
+     <span class="bar"></span>
+     <span class="bar"></span>
+    </button>
+
+    <nav class="nav" aria-label="Menú principal">
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Proyectos</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
   </header>
   
+  <!-- MAIN -->
   <main>
-    <section class="hero">
-      <h1>Construyendo el futuro linea por linea</h1>
-      <p>Desarrollador FullStack en formación, creando proyectos modernos con HTML, CSS y JavaScript.</p>
-      <a href="#proyectos" class="btn">Ver mis proyectos</a>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+       <h1>Construyendo el futuro, línea por línea.</h1>
+       <p>Desarrollador FullStack en formación — proyectos reales con HTML, CSS y JavaScript.</p>
+       <a href="#services" class="btn">Ver mis proyectos</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/img/hero.jpg" alt="Imagen de héroe">
+      </div>
     </section>
     
-    <section class="features">
-      <article>
-        <h3>Diseño moderno</h3>
-        <p>HTML y CSS limpio y semántico.</p>
-      </article>
-      <article>
-        <h3>Responsive</h3>
-        <p>Se adapta a cualquier pantalla.</p>
-      </article>
-      <article>
-        <h3>Fácil de usar</h3>
-        <p>Código simple y escalable.</p>
-      </article>
+    <!-- FEATURES -->
+    <section id="services" class="features"></section>
+    <div id="loader">Cargando...</div> 
+    
+    <!-- ABOUT -->
+    <section id="about" class="about">
+     <img src="assets/img/mi-foto.jpeg" 
+       srcset="assets/img/mi-foto.jpeg 480w, assets/img/profile.jpg 800w" 
+       sizes="(max-width:600px) 120px, 220px"
+       alt="Foto de Kobac">
+     <div class="about-text">
+       <h2>Sobre mí</h2>
+       <p>Soy Kobac J. Faiffer — desarrollador FullStack en formación. Me apasiona convertir ideas en productos con código limpio y enfoque práctico.</p>
+       <a href="#contact" class="btn">Contactar</a>
+     </div>
     </section>
-  </main>
-  <footer>
-  <p>&copy; 2025 Kobac J. Faiffer - Todos los derechos reservados.</p>
-  <div class="social-links">
-    <a href="https://github.com/Kobacvjfaiffer" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/kobac-j-faiffer-950750bb/" target="_blank">
-      <i class="fab fa-linkedin"></i>
-    </a>
-  </div>
-</footer>
+   </main>
+  
+   <!-- CONTACT -->
+   <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
 
+      <label for="email">Correo:</label>
+      <input type="email" id="email" name="email" required>
 
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="formMessage" class="hidden"></p>
+   </section>
+
+  <!-- FOOTER -->
+  <footer >
+    <p>&copy; 2025 Kobac J. Faiffer - Todos los derechos reservados.</p>
+    <div class="social-links">
+      <a href="https://github.com/Kobacvjfaiffer" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/kobac-j-faiffer-950750bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="main.js"></script>
+  <script src="server.js"></script>
 </body>
 </html>
