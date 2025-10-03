@@ -135,7 +135,7 @@ header nav ul li a:hover {
 /* ---------------- FEATURES ---------------- */
 .features {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   padding: 4rem 10%;
 }
@@ -147,12 +147,30 @@ header nav ul li a:hover {
   text-align: center;
   box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
 }
-
-.features img {
-  max-width: 100%;
-  height: auto;
-
+.feature i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
 }
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.feature {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+}
+.feature img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
 /* En desktop limitar el tamaño */
 @media (min-width: 1024px) {
   .features img {

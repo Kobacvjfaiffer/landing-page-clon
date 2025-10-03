@@ -51,7 +51,7 @@ cargarProyectos();
 // ---- SERVICIOS (FEATURES) ----
 async function cargarServicios() {
   try {
-    const res = await fetch("http://localhost:3000/api/services");
+    const res = await fetch("data/services.json");// archivo local
     const data = await res.json();
 
     const contenedor = document.querySelector(".features");
