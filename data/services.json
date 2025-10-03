@@ -3,21 +3,21 @@
     "id": 1,
     "title": "Desarrollo Web",
     "description": "HTML, CSS, JavaScript y proyectos React sencillos.",
-    "image": "assets/img/feature1.jpg",
+    "image": "./assets/img/feature1.jpg",
     "icon": "fas fa-code"
   },
   {
     "id": 2,
     "title": "Back-end",
     "description": "APIs REST Node/Express, bases de datos SQL/NoSQL.",
-    "image": "assets/img/feature2.jpg",
+    "image": "./assets/img/feature2.jpg",
     "icon": "fas fa-database"
   },
   {
     "id": 3,
     "title": "Deploy",
     "description": "Vercel/GitHub Pages y deploy de backends en Render/Railway.",
-    "image": "assets/img/feature3.jpg",
+    "image": "./assets/img/feature1.jpg",
     "icon": "fas fa-cloud-upload-alt"
   }
 ]
